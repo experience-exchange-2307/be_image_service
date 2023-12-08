@@ -9,7 +9,7 @@ class Api::V1::ImagesController < ApplicationController
     parsed = JSON.parse(response.body, symbolize_names: true)
     if parsed[:urls][:raw]
       image = parsed[:urls][:raw]
-      render json: image
+      render json: {image_url: "#{image}"}
     else
       render json: {error: "could not retrieve a random image"}, status: 400
     end
