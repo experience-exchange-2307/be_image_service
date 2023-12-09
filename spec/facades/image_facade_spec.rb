@@ -1,6 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe ImageFacade do 
+  it "exists" do 
+    facade = ImageFacade.new
+
+    expect(facade).to be_an(ImageFacade)
+  end
+  
   describe "class methods", :vcr do 
     it "#get_image" do 
       image = ImageFacade.get_image
