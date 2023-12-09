@@ -4,7 +4,7 @@ class Api::V1::ImagesController < ApplicationController
     if image
       render json: ImageSerializer.new(image), status: 200
     else
-      render json: {error: "image could not be found"}
+      render json: {error: "image could not be found"}, status: 404
     end 
   end
 end
