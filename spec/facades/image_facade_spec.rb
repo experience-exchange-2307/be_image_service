@@ -11,8 +11,10 @@ RSpec.describe ImageFacade do
     it "#get_image" do 
       image = ImageFacade.get_image
       
-      expect(image).to be_an(Image)
-      expect(image.raw_image).to eq("https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixid=M3w1MjcwODR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDIwOTMzODF8&ixlib=rb-4.0.3")
+      expect(image).to be_a Hash
+      expect(image).to have_key(:response)
+      expect(image[:response]).to be_an Image
+      expect(image[:response].raw_image).to eq("https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixid=M3w1MjcwODR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDIwOTMzODF8&ixlib=rb-4.0.3")
     end
   end
 end
