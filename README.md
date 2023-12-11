@@ -27,6 +27,7 @@ This specific repo is a microservice for the retrieval of images for user profil
 Primary:
 - Ruby 3.2.2
 - Rails 7.0.8
+- Docker
 
 Production Gems:
 - [jsonapi-serializer](https://github.com/jsonapi-serializer/jsonapi-serializer)
