@@ -9,8 +9,8 @@ class ImageService
   private
 
   def conn
-      Faraday.new(url: "https://api.unsplash.com/") do |config|
-        config.request :json
-      end
+    Faraday.new(url: "https://api.unsplash.com/") do |config|
+      config.request :json
+    end
   end
 end
